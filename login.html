@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- The form sends the username and password to login.php -->
+    <form class="card" id="loginForm" action="login.php" method="post" novalidate>
+        <div class="logo">&#128274;</div>
+        <h1>Sign In</h1>
+        <p class="subtitle">Enter your details to access your account</p>
+
+        <!-- Error message (filled in by script.js when login.php sends one back) -->
+        <div class="alert" id="alert"></div>
+
+        <div class="field">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" autocomplete="username" autofocus>
+            <div class="hint" id="userHint">Please enter your username.</div>
+        </div>
+
+        <div class="field">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" autocomplete="current-password">
+            <button type="button" class="toggle" id="togglePw">Show</button>
+            <div class="hint" id="pwHint">Please enter your password.</div>
+        </div>
+
+        <div class="row">
+            <label class="check"><input type="checkbox" name="remember"> Remember me</label>
+            <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn" id="submitBtn">Log In</button>
+
+        <p class="footer">Don't have an account? <a href="#">Sign up</a></p>
+    </form>
+
+    <!-- Link to the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
